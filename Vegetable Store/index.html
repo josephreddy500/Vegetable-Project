@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fresh Veggie Shop</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Fresh Veggie Shop</h1>
+    <div>
+      <div class="cart">🛒 Cart: <span id="cart-count">0</span></div>
+      <button id="view-cart-btn">View Cart</button>
+    </div>
+  </header>
+  
+  <div class="search-container">
+  <input type="text" id="search-input" placeholder="Search for vegetables...">
+</div>
+
+
+  <section class="products">
+    <h2>Available Vegetables</h2>
+    <div class="product-grid">
+      <div class="product" data-name="Tomatoes" data-price="2.00">
+        <img src="images/tomato.jpg" alt="Tomato">
+        <h3>Tomatoes</h3>
+        <p>$2.00 / kg</p>
+        <div class="cart-controls">
+          <button class="decrease">−</button>
+          <span class="item-count">0</span>
+          <button class="increase">+</button>
+        </div>
+      </div>
+      <div class="product" data-name="Potatoes" data-price="1.50">
+        <img src="images/potato.jpg" alt="Potato">
+        <h3>Potatoes</h3>
+        <p>$1.50 / kg</p>
+        <div class="cart-controls">
+          <button class="decrease">−</button>
+          <span class="item-count">0</span>
+          <button class="increase">+</button>
+        </div>
+      </div>
+      <div class="product" data-name="Carrots" data-price="1.80">
+        <img src="images/carrot.jpg" alt="Carrot">
+        <h3>Carrots</h3>
+        <p>$1.80 / kg</p>
+        <div class="cart-controls">
+          <button class="decrease">−</button>
+          <span class="item-count">0</span>
+          <button class="increase">+</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- View Cart Modal -->
+  <div id="cart-modal" class="modal hidden">
+    <div class="modal-content">
+      <span class="close-button">&times;</span>
+      <h2>Your Cart</h2>
+      <ul id="cart-items"></ul>
+      <p><strong>Total Items:</strong> <span id="total-items">0</span></p>
+      <button id="checkout-btn">Checkout</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
